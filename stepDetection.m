@@ -12,6 +12,7 @@ switch n
         M = csvread('sensors30carpet.csv', 1, 0);s = 30;
     case 4
         M = csvread('sensors30wood.csv', 1, 0);s = 30;
+        M = csvread('C:\Users\Shiyu Cheng\Desktop\stepDetection\1\NGIMU - 003CF4BA\sensors.csv', 1, 0);s = 30
 end
 
 if s == 20
@@ -55,6 +56,7 @@ plot(time, X)
 grid on
 set(gca,'XTick',0:3:63);
 set(gca, 'XMinorGrid','on');
+title("acc and gyro")
 
 Y = accx.^2+accy.^2+accz.^2;
 figure(4)
@@ -62,7 +64,7 @@ plot(time, Y)
 grid on
 set(gca,'XTick',0:3:63);
 set(gca, 'XMinorGrid','on');
-
+title("acc only")
 start = 61;
 
 i = 1;
@@ -112,4 +114,28 @@ for i = 1:length(peak)-1
 end
 disp("Step_1 is:")
 disp(step_1)
-     
+
+Z = gyrox.^2+gyroy.^2+gyroz.^2;
+figure(6)
+plot(time, X)
+grid on
+set(gca,'XTick',0:3:63);
+set(gca, 'XMinorGrid','on'); 
+title("gyro only")
+
+M = (gyrox/10).^2+(gyroy/20).^2+(gyroz/10).^2 ...
++(accx/0.5).^2+(accy/1.5).^2+(accz/0.5).^2;
+figure(7)
+plot(time, M)
+grid on
+set(gca,'XTick',0:3:63);
+set(gca, 'XMinorGrid','on'); 
+title("acc gyro normalize")
+number = 0;
+for i = 1:size(M)
+    if M(i) >=1.5
+        number = number + 1;
+    end
+end
+disp(number)
+        
