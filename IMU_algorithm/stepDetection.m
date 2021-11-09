@@ -5,14 +5,14 @@ n = 4;
 threshold = 0.45;
 switch n
     case 1
-        M = csvread('sensors20carpet.csv', 1, 0);s = 20;
+        %M = csvread('sensors20carpet.csv', 1, 0);s = 20;
     case 2
-        M = csvread('sensors20wood.csv', 1, 0);s = 20;
+        %M = csvread('sensors20wood.csv', 1, 0);s = 20;
     case 3
-        M = csvread('sensors30carpet.csv', 1, 0);s = 30;
+        %M = csvread('sensors30carpet.csv', 1, 0);s = 30;
     case 4
-        M = csvread('sensors30wood.csv', 1, 0);s = 30;
-        M = csvread('C:\Users\Shiyu Cheng\Desktop\stepDetection\1\NGIMU - 003CF4BA\sensors.csv', 1, 0);s = 30
+        %M = csvread('sensors30wood.csv', 1, 0);s = 30;
+        M = csvread('C:\Users\Shiyu Cheng\Desktop\3steps\2\NGIMU - 003CF4BA\sensors.csv', 1, 0);s = 30
 end
 
 if s == 20
