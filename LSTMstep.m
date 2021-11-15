@@ -17,7 +17,7 @@ for i = 1:60
 end
 % xtrain = xtotal(1:900,:);
 % xvalidation = xtotal(901:1260,:);
-disp("no bug")
+disp("no bug 1")
 % label y
 label = csvread('label.csv',0,1);
 label_1 = label/0.5+1;
@@ -84,3 +84,9 @@ options = trainingOptions('adam', ...
     'Plots','training-progress', ...
     'Verbose',false);
 net = trainNetwork(xtrain,ytrain,layers,options);
+% YPred = classify(net,imdsValidation);
+% YValidation = imdsValidation.Labels;
+% 
+% accuracy = sum(YPred == YValidation)/numel(YValidation);
+% %disp accuracy
+% disp(['The accuracy is ',num2str(accuracy)])
