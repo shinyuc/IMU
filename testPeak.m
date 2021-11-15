@@ -1,6 +1,6 @@
 %M = csvread([num2str(i),'.csv'],1,1);
 
-M_1 = csvread('16.csv',1,0);
+M_1 = csvread('1.csv',1,0);
 time = M_1(:,1);
 gyrox = M_1(:,2); gyroy = M_1(:,3); gyroz = M_1(:,4);
 accx = M_1(:,5); accy = M_1(:,6); accz = M_1(:,7);
@@ -26,5 +26,25 @@ subplot(3,2,4)
 plot(time, accy)
 title("Accy")
 subplot(3,2,6)
+plot(time, accz)
+title("Accz")
+
+figure(2)
+subplot(6,1,1)
+plot(time, gyrox)
+title("Gyrox")
+subplot(6,1,2)
+plot(time, gyroy)
+title("Gyroy")
+subplot(6,1,3)
+plot(time, gyroz)
+title("Gyroz")
+subplot(6,1,4)
+plot(time, accx)
+title("Accx")
+subplot(6,1,5)
+plot(time, accy)
+title("Accy")
+subplot(6,1,6)
 plot(time, accz)
 title("Accz")
