@@ -135,4 +135,4 @@ testfile.txt
 test_data/*
 pastData/
 IMU_project/
-DNN_past
+DNN_past/
