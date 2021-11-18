@@ -132,3 +132,7 @@ dmypy.json
 
 HW6_updated-1.mlx
 testfile.txt
+test_data/*
+pastData/
+IMU_project/
+DNN_past
