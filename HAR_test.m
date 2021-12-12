@@ -23,7 +23,7 @@ for i = 1:90
             j = j+150;
             fall = fall+1;
         else
-            j = j+25; 
+            j = j+50; 
         end
            
     end
